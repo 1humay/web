@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head >
+
+<title>Humay lernt HTML</title>
+<link rel="stylesheet" href="mystyle.css">
+<script src="myScript.js"></script>
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<!-- Navigation bar on the left -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://reverberatory-hoist.000webhostapp.com/">Homepage</a>
+  <a href="photography.html">Photography</a> 
+  <a href="plants.html">Get to know my plants &#127804;</a>
+  <a href="guestbook.php"> Guestbook </a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- an element to open the sidenav -->
+<button id="open" class="open" onclick="openNav()"> <img src="hello.gif"> Open Menu </button>
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<div  id="main">
+<h1> Image grid</h1>
+<p style="text-align:center">This is <i>not</i> supposed to be a serious photography page. </p>
+<div class="row">
+    
+    <div class="column">
+        <img class="gal" src="/photography/1.JPG">
+        <img class="gal" src="/photography/2.JPG" >
+        <img class="gal" src="/photography/3.JPG" >
+        <img class="gal" src="/photography/4.JPG">
+        <img class="gal" src="/photography/5.JPG">
+        <img class="gal" src="/photography/11.JPG">
+    </div>
+    <div class="column">
+        <img class="gal" src="/photography/25.JPG">
+        <img class="gal" src="/photography/6.JPG">
+        <img class="gal" src="/photography/7.JPG" >
+        <img class="gal" src="/photography/8.JPG" >
+        <img class="gal" src="/photography/9.JPG">
+        <img class="gal" src="/photography/10.JPG">
+    </div>
+    <div class="column">
+        <img class="gal" src="/photography/12.JPG">
+        <img class="gal" src="/photography/13.JPG" >
+        <img class="gal" src="/photography/14.JPG" >
+        <img class="gal" src="/photography/15.JPG">
+        <img class="gal" src="/photography/17.JPG">
+        <img class="gal" src="/photography/24.JPG">
+    </div>
+    <div class="column">
+        <img class="gal" src="/photography/26.JPG">
+        <img class="gal" src="/photography/18.JPG">
+        <img class="gal" src="/photography/19.JPG" >
+        <img class="gal" src="/photography/20.JPG" >
+        <img class="gal" src="/photography/21.JPG">
+        <!--<img class="gal" src="/photography/22.JPG">-->
+        <img class="gal" src="/photography/23.JPG">
+    </div>
+</div> 
+
+</div> 
+
+<script>
+    /*modal for zooming an image*/
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+
+window.onload = function() {
+    var images = document.getElementsByClassName("gal");
+    for (var i=0; i<images.length; i++) {
+           var image = images[i];
+           image.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+           }
+    }
+}
+
+//closing the modal
+var cl = document.getElementsByClassName("close")[0];
+cl.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+
+    
+</script>
+
+
+</body>
+
+</html>
